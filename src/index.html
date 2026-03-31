@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Tracking App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bg-dark text-white py-4 mb-4 shadow">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Time Tracking</h1>
+    </div>
+  </header>
+  <main class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title h5 mb-3">Projects</h2>
+            <ul id="project-list" class="list-group mb-3"></ul>
+            <form id="add-project-form" class="input-group">
+              <input type="text" id="new-project-name" maxlength="50" class="form-control" placeholder="Add project..." required>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title h5 mb-3">Tasks</h2>
+            <ul id="task-list" class="list-group mb-3"></ul>
+            <form id="add-task-form" class="input-group">
+              <input type="text" id="new-task-name" maxlength="50" class="form-control" placeholder="Add task..." required>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title h5 mb-3">Current Task</h2>
+            <div id="current-task-info" class="mb-3"></div>
+            <div id="timer-controls" class="d-flex flex-wrap gap-2">
+              <button id="start-btn" class="btn btn-success">Start</button>
+              <button id="pause-btn" class="btn btn-warning">Pause</button>
+              <button id="resume-btn" class="btn btn-info">Resume</button>
+              <button id="end-btn" class="btn btn-danger">End</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title h5 mb-3">Today's Totals</h2>
+            <div id="totals-content"></div>
+            <button id="generate-pdf-btn" class="btn btn-outline-secondary mt-3 w-100">Generate PDF Timesheet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

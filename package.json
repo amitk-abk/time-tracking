@@ -1,0 +1,15 @@
+{
+  "name": "time-tracking-app",
+  "version": "1.0.0",
+  "description": "Local time tracking web app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "jsdom": "^29.0.1"
+  }
+}
